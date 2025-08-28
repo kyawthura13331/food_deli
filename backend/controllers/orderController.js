@@ -1,7 +1,7 @@
 import orderModel from "../models/orderModel.js";
 import userModel from "../models/userModel.js";
 import stripe from "stripe";
-
+import jwt from 'jsonwebtoken'
 
 const placeOrder = async (req, res) => {
   try {
@@ -20,16 +20,16 @@ res.json({success:false,message:error})
   }
 
 };
-const userOrder =async (req,res)=>{
+ 
+//// user order panel
+const userOrder = async(req,res)=>{
   try {
-    const orders = await orderModel.find({userId:req.body.userId})
-    res.json({success:true,data:orders})
-    
+    const order = await orderModel.find({userId:req.body.userId});
+    res.json({success:true,data:order})
   } catch (error) {
-    res.json({success:true,message:error})
+    res.json({success:false,message:error})
   }
 }
-
 //For Admin order panel
 
 const listOrders = async(req,res)=>{
