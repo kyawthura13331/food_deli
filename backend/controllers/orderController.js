@@ -7,7 +7,7 @@ const placeOrder = async (req, res) => {
   try {
     
     const newOrder = new orderModel({
-      userId : req.body.userId,
+      userId : req.userId,
       items : req.body.item,
       amount : req.body.amount,
       address:req.body.address
@@ -24,7 +24,8 @@ res.json({success:false,message:error})
 //// user order panel
 const userOrder = async(req,res)=>{
   try {
-    const order = await orderModel.find({userId:req.body.userId});
+    const order = await orderModel.find({userId:req.userId});
+    console.log(order, "found with useridss")
     res.json({success:true,data:order})
   } catch (error) {
     res.json({success:false,message:error})

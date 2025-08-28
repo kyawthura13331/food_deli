@@ -14,6 +14,7 @@ const MyOrder = () => {
         {},
         { headers: { token } }
       );
+      console.log(response.data)
       setData(response.data.data);
     } catch (error) {
       console.error("Error fetching orders:", error);
@@ -26,7 +27,7 @@ const MyOrder = () => {
     }
   }, [token]);
 
-    
+
   return (
     <div className="p-6 md:p-10 bg-gray-100 h-fit">
       <h1 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800">
