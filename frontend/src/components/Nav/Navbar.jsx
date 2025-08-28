@@ -97,7 +97,7 @@ const Navbar = ({ setShowLogin }) => {
             {/* Hover Menu */}
             <div className="absolute top-full left-0 bg-orange-300 mt-2 w-25 h-fit p-2 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col gap-2 z-50">
              <button
-                onClick={() => navigate("/order")}
+                onClick={() => navigate("/myorder")}
                 className="bg-orange-400 p-2 shadow w-full flex justify-center rounded"
               >
                 <img
