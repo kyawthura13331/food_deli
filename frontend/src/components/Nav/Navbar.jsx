@@ -50,9 +50,8 @@ const Navbar = ({ setShowLogin }) => {
 
       {/* Right Section */}
       <div className="navbar-right flex items-center gap-4">
-        {/* Search Icon */}
+
    
-                <img src={assets.search_icon} alt="Search" className="cursor-pointer" />
         
 
         {/* Cart Icon */}

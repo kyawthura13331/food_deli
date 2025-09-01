@@ -85,7 +85,7 @@ const fetchUsername = async () =>{
   // Load cart data from backend
   const loadCartData = async (token) => {
     try {
-      const response = await axios.post(
+      const response = await axios.get(
         url + "/api/cart/get",
         {},
         { headers: { token } }
