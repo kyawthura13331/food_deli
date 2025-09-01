@@ -14,7 +14,7 @@ const MyOrder = () => {
         {},
         { headers: { token } }
       );
-      console.log(response.data)
+      
       setData(response.data.data);
     } catch (error) {
       console.error("Error fetching orders:", error);
