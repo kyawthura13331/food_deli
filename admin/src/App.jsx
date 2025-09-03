@@ -9,7 +9,7 @@ import Add from './pages/Add/Add'
 const App = () => {
   const url="http://localhost:4000"
   return (
-    <div>
+    <div className='bg-white'>
       <ToastContainer />
       <Navbar />
       <hr />

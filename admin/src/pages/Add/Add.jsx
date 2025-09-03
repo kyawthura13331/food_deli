@@ -43,7 +43,7 @@ const Add = ({url}) => {
     }
     
   return (
-    <div className="flex justify-center   bg-gray-100 p-6 w-3/4 ml-10 px-20">
+    <div className="flex justify-center  mt-3 bg-gray-100 p-6 w-3/4 ml-10 px-20">
       <form onSubmit={handleSumit} className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-lg flex flex-col gap-5">
         {/* Upload Image */}
         <div className="flex flex-col items-center">
@@ -86,7 +86,7 @@ const Add = ({url}) => {
             required
           ></textarea>
         </div>
-            <div className="flex justify-between flex-row gap-10">
+            <div className="flex justify-between flex-row gap-10 ">
                 <div>
                     <p>Product category</p>
                     <select name="category"
