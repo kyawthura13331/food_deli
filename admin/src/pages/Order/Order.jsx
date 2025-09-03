@@ -61,7 +61,7 @@ const Order = ({ url }) => {
   };
 
   return (
-    <div className="p-6 bg-gray-50 w-2/3 h-screen">
+    <div className="p-6 bg-gray-50 w-2/3 h-165c mb-5">
       <h1 className="text-3xl font-bold mb-6">🛒 Admin Orders</h1>
 
       {loading ? (

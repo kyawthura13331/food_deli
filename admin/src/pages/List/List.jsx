@@ -36,7 +36,7 @@ const removeFood = async (foodId)=>{
   }, []);
 
   return (
-    <div className="bg-white shadow-lg rounded-xl p-6 w-2/3 ml-10">
+    <div className="bg-white shadow-lg rounded-xl p-6 w-2/3 ml-10 h-160">
       {/* Title */}
       <h2 className="text-2xl font-semibold mb-6 text-gray-800">
         All Foods List

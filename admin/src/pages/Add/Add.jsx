@@ -43,7 +43,7 @@ const Add = ({url}) => {
     }
     
   return (
-    <div className="flex justify-center  bg-gray-100 p-6 w-3/4 ml-10 px-20">
+    <div className="flex justify-center   bg-gray-100 p-6 w-3/4 ml-10 px-20">
       <form onSubmit={handleSumit} className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-lg flex flex-col gap-5">
         {/* Upload Image */}
         <div className="flex flex-col items-center">
@@ -86,7 +86,7 @@ const Add = ({url}) => {
             required
           ></textarea>
         </div>
-            <div className="flex justify-between gap-20">
+            <div className="flex justify-between flex-row gap-10">
                 <div>
                     <p>Product category</p>
                     <select name="category"
@@ -105,7 +105,8 @@ const Add = ({url}) => {
                 </div>
                  <div>
                 <p>Product Price</p>
-                <input type="Number" value={data.price} onChange={handleOnchange} name="price" placeholder="$20" className="border w-30 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none "/>
+                <input type="Number" value={data.price} onChange={handleOnchange} name="price" placeholder="$20"
+                 className="border w-30 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none "/>
             </div>
             </div>
            
