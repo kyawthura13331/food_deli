@@ -86,7 +86,7 @@ const Add = ({url}) => {
             required
           ></textarea>
         </div>
-            <div className="flex justify-between flex-row gap-10 ">
+            <div className="flex justify-between flex-col sm:flex-row gap-10 ">
                 <div>
                     <p>Product category</p>
                     <select name="category"

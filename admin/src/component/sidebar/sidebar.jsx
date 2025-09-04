@@ -6,7 +6,7 @@ import './sidebar.css'
 const Sidebar = () => {
   return (
     <div
-      className="w-[20vw] bg-black/5 rounded-xl shadow-xs h-90%
+      className="w-[20vw] h-auto bg-black/5 rounded-xl shadow-xs h-90%
                m-3 p-5 text-black/60"
     >
       <div className="flex flex-col gap-4">
