@@ -14,8 +14,18 @@ const MyOrder = () => {
         {},
         { headers: { token } }
       );
-      
-      setData(response.data.data);
+
+      if (response.data.success) {
+        // Sort orders by createdAt if available, otherwise by _id
+        const sortedOrders = [...response.data.data].sort((a, b) => {
+          if (a.createdAt && b.createdAt) {
+            return new Date(b.createdAt) - new Date(a.createdAt);
+          }
+          return b._id.localeCompare(a._id); // fallback
+        });
+
+        setData(sortedOrders);
+      }
     } catch (error) {
       console.error("Error fetching orders:", error);
     }
@@ -26,7 +36,6 @@ const MyOrder = () => {
       fetchOrder();
     }
   }, [token]);
-
 
   return (
     <div className="p-6 md:p-10 bg-gray-100 h-fit">
@@ -84,9 +93,10 @@ const MyOrder = () => {
                   </span>
                 </p>
 
-                <button  
-                onClick={fetchOrder}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm transition">
+                <button
+                  onClick={fetchOrder}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm transition"
+                >
                   Track Order
                 </button>
               </div>
